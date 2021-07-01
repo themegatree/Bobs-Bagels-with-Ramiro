@@ -1,3 +1,5 @@
+const Bagel = require("./bagel");
+
 class Basket {
     constructor (maxCapacity) {
         this._maxCapacity = maxCapacity;
@@ -56,7 +58,16 @@ class Basket {
         }
 
     }
-    
+    sum(){
+        let total = 0 ;
+        for (let i = 0; i < this._itemList.length; i++){
+            total += this._itemList[i].price ;
+            console.log( total)
+        }
+        return total;
+    }
+
+
 
 }
 

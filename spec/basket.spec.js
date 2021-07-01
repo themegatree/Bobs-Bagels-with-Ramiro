@@ -240,4 +240,27 @@ actOutput9_2 = myBasket9.addItem(myBagel9_2)
 actOutput9 = myBasket9.addItem(myBagel9)
 console.log(actOutput9_2)
 console.log ( assertEquals(actOutput9_2,exOutput9_2));
+//--------------------------------------------------------------------------------------
+console.log("testing to see if bagel money sum works");
+
+inputA = "Bagel";
+inputA_2 = "Bagel";
+capA = 10;
+exOutputA = 6;
+
+let myBagelA = new Bagel(inputA)
+let myBagelA_2 = new Bagel(inputA_2)
+let myBasketA = new Basket ( capA)
+
+
+myBasketA.addItem(myBagelA_2)
+myBasketA.addItem(myBagelA)
+actOutputA = myBasketA.sum()
+console.log(assertEquals(actOutputA,exOutputA));
+
+
+
+
+
+
 
