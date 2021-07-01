@@ -240,5 +240,4 @@ actOutput9_2 = myBasket9.addItem(myBagel9_2)
 actOutput9 = myBasket9.addItem(myBagel9)
 console.log(actOutput9_2)
 console.log ( assertEquals(actOutput9_2,exOutput9_2));
-console.log ( myBasket9._itemList)
 

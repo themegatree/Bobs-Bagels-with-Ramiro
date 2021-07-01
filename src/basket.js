@@ -52,8 +52,7 @@ class Basket {
     increaseCap(newCap) {
         
         if (this.isFull() === true){            //&& newCap > this.maxCapacity
-            this._maxCapacity = newCap
-            console.log('Here')
+            this._maxCapacity = newCap;
         }
 
     }
