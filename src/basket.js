@@ -1,12 +1,7 @@
 class Basket {
     constructor (maxCapacity) {
-        this._capacity = 0;
         this._maxCapacity = maxCapacity;
         this._itemList = [];
-    }
-
-    get capacity() {
-        return this._capacity;
     }
 
     get maxCapacity () {
@@ -18,7 +13,7 @@ class Basket {
     }
 
     isFull () {
-        if (this._capacity === this._maxCapacity) {
+        if (this._itemList.length === this._maxCapacity) {
             return true;
         }
         else {
@@ -27,8 +22,10 @@ class Basket {
     }
 
     addItem(item) {
-        if (this._capacity < this._maxCapacity){
+        if (this._itemList.length < this.maxCapacity){
             this._itemList.push(item);
+            console.log('Here');
+
         }
         else {
             console.log('Basket is Full');
@@ -45,7 +42,5 @@ class Basket {
     
 
 }
-
-let myBasket = new Basket(10);
 
 module.exports = Basket;
