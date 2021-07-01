@@ -22,6 +22,14 @@ class Basket {
     }
 
     addItem(item) {
+        if (this._itemList.includes(item) === true){
+            this._itemList.push(item)
+            return"A bagel already in basket";
+        }  
+        /*if (this._itemList.includes(item) === false){
+            return "no more bagels"
+        }*/
+        
         if (this._itemList.length < this.maxCapacity){
             this._itemList.push(item);
 
@@ -29,6 +37,7 @@ class Basket {
         else {
             console.log('Basket is Full');
         }
+        
     }
 
     removeItem(item) {

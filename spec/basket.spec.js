@@ -205,6 +205,40 @@ let myBasket7 = new Basket(cap)
 
 actOutput7 = myBasket7.removeItem(myBagel7)
 
-//console showing that the item doesnt exit
+//console showing that the item does exist
 
 console.log(assertEquals(actOutput7, exOutput));
+
+
+console.log('Can we add an item that already exists?');
+
+input8 = 'Bagel';
+cap8 = 3;
+exOutput8 = 'A bagel already in basket';
+
+
+let myBagel8 = new Bagel(input8)
+let myBasket8 = new Basket(cap8)
+
+actOutput8 = myBasket8.addItem(myBagel8)
+actOutput8 = myBasket8.addItem(myBagel8)
+console.log(actOutput8)
+console.log ( assertEquals(actOutput8,exOutput8));
+
+
+console.log('Can we add an item that already exists?');
+input9 = 'omellete';
+input9_2 = 'Bagel';
+cap9 = 3;
+exOutput9_2 = 'A bagel already in basket';
+
+let myBagel9 = new Bagel(input9)
+let myBagel9_2 = new Bagel(input9_2)
+let myBasket9 = new Basket(cap9)
+
+actOutput9_2 = myBasket9.addItem(myBagel9_2)
+actOutput9 = myBasket9.addItem(myBagel9)
+console.log(actOutput9_2)
+console.log ( assertEquals(actOutput9_2,exOutput9_2));
+console.log ( myBasket9._itemList)
+
