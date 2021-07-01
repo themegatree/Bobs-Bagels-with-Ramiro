@@ -130,3 +130,38 @@ console.log(assertEquals(actOutput_3, exOutput_3));
 console.log(myBasket4.maxCapacity)
 console.log(myBasket4.itemList.length)
 
+//----------------------------------------
+
+
+console.log('If basket full can we create newCap');
+
+input5 = 'just a bagel';
+cap5 = 0;
+exOutput5 = false;
+newCap = 1
+exOutput6= true
+
+
+let myBagel5 = new Bagel(input5)
+let myBasket5 = new Basket(cap5)
+myBasket5.addItem(myBagel5)
+
+
+
+if (myBasket5.itemList.indexOf(myBagel5) === -1) {
+    actOutput5 = false;
+}
+else {
+    actOutput5 = true;
+}
+
+console.log(assertEquals(actOutput5, exOutput5));
+
+myBasket5.increaseCap(newCap)
+if (myBasket5.maxCapacity > myBasket5._itemList.length) {
+    actOutput6 = true
+}else{
+    actOutput6 = false 
+}
+console.log (assertEquals(actOutput6,exOutput6));
+

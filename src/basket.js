@@ -38,7 +38,13 @@ class Basket {
             this._itemList.splice(index, 1)
         }
     }
+    increaseCap(newCap) {
+        
+        if (this.isFull() === true){
+            this._maxCapacity = newCap
+        }
 
+    }
     
 
 }
