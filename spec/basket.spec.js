@@ -139,7 +139,7 @@ input5 = 'just a bagel';
 cap5 = 0;
 exOutput5 = false;
 newCap = 1
-exOutput6= true
+exOutput5_2= true
 
 
 let myBagel5 = new Bagel(input5)
@@ -158,10 +158,53 @@ else {
 console.log(assertEquals(actOutput5, exOutput5));
 
 myBasket5.increaseCap(newCap)
-if (myBasket5.maxCapacity > myBasket5._itemList.length) {
+if (myBasket5.maxCapacity >= myBasket5._itemList.length) {
+    actOutput5_2 = true
+}else{
+    actOutput5_2 = false 
+}
+console.log (assertEquals(actOutput5_2,exOutput5_2));
+
+//-----------------------------------------------
+
+console.log('Can we have a max Cap bigger then the basket?');
+
+input6 = 'just a bagel';
+cap6 = 1;
+exOutput6 = true;
+newCap = 0;
+
+
+let myBagel6 = new Bagel(input6)
+let myBasket6 = new Basket(cap6)
+myBasket6.addItem(myBagel6)
+
+
+myBasket5.increaseCap(newCap)
+if (myBasket6.maxCapacity >= myBasket6._itemList.length) {
     actOutput6 = true
 }else{
     actOutput6 = false 
 }
+
+console.log(myBasket6.maxCapacity)
+console.log(myBasket6.isFull)
 console.log (assertEquals(actOutput6,exOutput6));
 
+//-------------------------------------------------
+
+
+console.log('Can we remove item that doesnt exist?');
+
+input7 = 'just a bagel';
+cap = 3;
+exOutput = 'Sorry, you haven\'t added this item yet' ;
+
+let myBagel7 = new Bagel(input7)
+let myBasket7 = new Basket(cap)
+
+actOutput7 = myBasket7.removeItem(myBagel7)
+
+//console showing that the item doesnt exit
+
+console.log(assertEquals(actOutput7, exOutput));

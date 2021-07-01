@@ -13,7 +13,7 @@ class Basket {
     }
 
     isFull () {
-        if (this._itemList.length === this._maxCapacity) {
+        if (this._itemList.length >= this._maxCapacity) {
             return true;
         }
         else {
@@ -24,7 +24,6 @@ class Basket {
     addItem(item) {
         if (this._itemList.length < this.maxCapacity){
             this._itemList.push(item);
-            console.log('Here');
 
         }
         else {
@@ -37,11 +36,15 @@ class Basket {
         if (index > -1) {
             this._itemList.splice(index, 1)
         }
+        else {
+            return 'Sorry, you haven\'t added this item yet';
+        }
     }
     increaseCap(newCap) {
         
-        if (this.isFull() === true){
+        if (this.isFull() === true){            //&& newCap > this.maxCapacity
             this._maxCapacity = newCap
+            console.log('Here')
         }
 
     }
